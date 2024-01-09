@@ -1,0 +1,228 @@
+/* Estilo geral */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: aliceblue;
+  padding: 30px;
+  color: #3e5052;
+  background-image: url('./assets/mountains.jpg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Aplicando box-sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Estilo do container principal */
+.app {
+  max-width: 700px;
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo dos títulos */
+h1, h2 {
+  color: #3e5052;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.2em;
+ display: flex;
+
+}
+
+/* Estilo dos parágrafos */
+p {
+  color: #3e5052;
+}
+
+/* Estilo de inputs e seletores */
+input, select {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 2px solid #bbcbcd;
+  border-radius: 6px;
+  width: 100%;
+  background-color: #fff;
+  font-size: 1em;
+}
+
+/* Estilo dos botões */
+button {
+  background-color: #97ac8f;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  font-size: 1em;
+  margin-right: 2px;
+  padding-right: 2px;
+  display: inline-block;
+  text-align: justify;
+  vertical-align: middle;
+  width: 65px;
+  height: 30px;
+}
+
+button:hover {
+  background-color: #83aabe;
+  transform: scale(1.05);
+}
+
+.complete {
+  width: 115px;
+  height: 33px;
+
+  }
+/* Estilo para botões de ação nas tarefas */
+.complete, .remove {
+  background-color: #97ac8f;
+  position: relative;
+  padding: 10px 20px; /* Ajuste de padding */
+
+}
+
+/* Efeito hover para botão de remover */
+.remove:hover {
+  background-color: #d9534f;
+}
+
+/* Estilo para ícones dentro do botão de remover */
+.remove i {
+  display: none;
+  color: white;
+}
+
+/* Exibindo ícone no hover */
+.remove:hover i {
+  display: inline;
+}
+
+/* Estilo para texto e ícone dentro do botão de remover */
+.remove-text, .remove-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+
+/* Controle de opacidade para o texto e ícone */
+.remove-text {
+  opacity: 1;
+}
+
+.remove-icon {
+  opacity: 0;
+}
+
+/* Alternância de opacidade no hover */
+.remove:hover .remove-text {
+  opacity: 0;
+}
+
+.remove:hover .remove-icon {
+  opacity: 1;
+}
+
+/* Estilo para o formulário e filtros */
+.todo-form, .filter, .search {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+/* Estilo para os itens de tarefa */
+.todo {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: rgba(150, 180, 200, 0.8);
+}
+
+/* Estilo para a lista de tarefas */
+.todo-list {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* Estilo para as opções de filtro e busca */
+.filter-options, .search-input {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.filter-options div, .search-input div {
+  flex: 1;
+}
+
+/* Estilo para os filtros */
+.filter {
+  display: flex;
+  flex-direction: row; /* Alinha os itens em linha */
+  flex-wrap: wrap; /* Permite que os itens se ajustem à largura do container */
+  align-items: center; /* Centraliza os itens verticalmente */
+  justify-content: space-evenly; /* Distribui os itens uniformemente com espaço ao redor */
+  gap: 10px; /* Espaçamento entre os itens */
+  width: 100%;
+  padding: 10px 0; /* Espaçamento vertical para o container */
+}
+
+/* Estilo para a barra de busca */
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Ajustes finais de responsividade e layout */
+@media (max-width: 768px) {
+  .app {
+      width: 95%;
+  }
+
+  input, select, button {
+      font-size: 0.9em;
+  }
+
+  h1 {
+      font-size: 1.8em;
+  }
+
+  h2 {
+      font-size: 1.3em;
+  }
+}
