@@ -123,7 +123,7 @@ O projeto foi desenvolvido com abordagem mobile-first, garantindo experiência o
 
 ## 📸 Screenshots
 
-<img src="./src/assets/screens/screenshot1.jpeg" alt="Tasklist Screenshot" width="400"/>
+<img src="./src/assets/screens/screenshot1.png" alt="Tasklist Screenshot" width="400"/>
 
 ## 👨‍💻 Sobre o Desenvolvedor
 
